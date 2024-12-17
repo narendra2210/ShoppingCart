@@ -1,0 +1,20 @@
+<!-- displaying flash -->
+  <!-- if  success message hai and message ki length hai means msg empty nhi hai then we will display a message means flash a message -->
+   <!-- jab hum view product button pr click krenge toh  message flash hoga means display hoga/popup hoga jo humne req.flash m pass kiya hai -->
+
+<% if(success && success.length){ %>
+        
+            <div class="alert alert-success" role="alert">
+              <strong><%=success%></strong>  
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+ <%} %>
+
+ <% if(error && error.length){ %>
+        
+    <div class="alert alert-danger" role="alert">
+      <strong><%=error%></strong>  
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+<%} %>
+

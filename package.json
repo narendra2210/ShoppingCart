@@ -1,0 +1,40 @@
+{
+  "name": "ecommerce-website",
+  "version": "1.0.0",
+  "description": "Ecommerce website is a web based application which is built using mongodb, express.js  and node.js.",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon ./app.js",
+    "start": "node ./app.js"
+  },
+  "keywords": [],
+  "author": "Narendra Singh",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^2.2.0",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.3.1",
+    "ejs": "^3.1.9",
+    "ejs-mate": "^4.0.0",
+    "express": "^4.18.2",
+    "express-mongo-sanitize": "^2.2.0",
+    "express-session": "^1.17.3",
+    "fs": "^0.0.1-security",
+    "iconv-lite": "^0.6.3",
+    "joi": "^17.11.0",
+    "jssha": "^3.3.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^8.0.3",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.0.2",
+    "passport": "^0.7.0",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^8.0.0",
+    "request": "^2.88.2",
+    "sanitize-html": "^2.11.0",
+    "stripe": "^16.12.0",
+    "uuid": "^9.0.1"
+  }
+}
