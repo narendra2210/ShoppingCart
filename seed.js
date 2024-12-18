@@ -34,13 +34,7 @@ const products=[
      }
 ]
 async function seedDB(){
-    // database ke crud methods(mongoose ke methods/mongoDB ke methods) promise return krte hai....promise chaining se bachne ke liye we will use async amd await
-    // so we will declare the function async and inside the async function we will use await keyword
-    // model pr insertmany method lagaya h
-    await Product.insertMany(products);
-    // Product model m (collection m) products array(means multiple documents ) insert kr rhe hai
-    // if hum mongosh pr show collections command run krte hai then it will return products which means database ke andar abhi ek hi collection(model) create hua hai products ka collection....Product model(products ka collection) create ho gya hai ......jab hum model create krte hai toh database m uske corresponding collection create ho jata hai and model
-    // to find the products we can run the command on mongoshell =>  db.products.find() it will return all the products
-    console.log("Data seeded successfully");
+   await Product.insertMany(products);
+   console.log("Data seeded successfully");
 }
 module.exports=seedDB;

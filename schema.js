@@ -1,9 +1,6 @@
-// schema for your server side validation
-// copy code from joi documentation
 const BaseJoi = require('joi');
-// sanitize-html html tag ko remove kr deta hai ...means user input m html tag submit nhi kr sakta
 const sanitizeHTML = require('sanitize-html');
-// hum khud se extension create kr sakte hai  with the help of joi.dev documentation api m jakar
+
 const extension =(joi)=>{
     return{
         type:'string',
@@ -27,18 +24,17 @@ const extension =(joi)=>{
         }
     }
 }
-// baseJOi m userdefined extension ko add kr diay hai then usse actual joi banaya hai
-// extension ko extend krenge bca hume joi ko bata padta hai hum extension ke sath kaam kr rhe hai
+
 const Joi = BaseJoi.extend(extension);
-// joi ke liye schema likhenge
-// product ka schema 
+
 const productSchema = Joi.object({
     name: Joi.string().required().escapeHTML(),
     price: Joi.string().min(0).required(),
     desc: Joi.string().required().escapeHTML()
 
 });
-// review ka schema
+
+
 const reviewSchema = Joi.object({
     rating: Joi.number().min(0).max(5).required(),
     comment: Joi.string().required().escapeHTML()

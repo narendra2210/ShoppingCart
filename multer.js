@@ -3,7 +3,6 @@ const { v4: uuidv4 } = require('uuid');
 const path=require('path');
 const { log } = require('console');
 
-// multer middleware se the image will upload on my local server means in my folder
 const storage = multer.diskStorage({
   destination: function (req, file, cb) {
     cb(null, 'public/images')

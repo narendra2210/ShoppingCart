@@ -1,5 +1,3 @@
-// Review.js file m Product.js file ka complete code copy kr lenge
-
 const mongoose=require('mongoose');
 const reviewSchema = new mongoose.Schema({
     rating:{

@@ -28,8 +28,7 @@ const uploadImageOnCloudinary = async(filePath,folderName) =>{
     catch(err){
       console.log("failed to delete image from the server",err);
     }
-    // isse image cloudinary pr uplaod ho jayegi inside a folder and uske baad apne server(means public ke andar images folder m bhi image ke path ko save kr rhe h toh wo bhi delete kr denge after uploading the image on cloudinary) se delete kara denge otherwise server pr space jayda legi
-    // image ko delete krne ke liye fs module ka use krenge
+    
     console.log(result); // cloudinary pr image uplaod krne ke baad jo cheeze milti hai wo result m aa jayengi
     return {
       secure_url:result.secure_url,
@@ -59,5 +58,3 @@ const deleteImageFromCloudinary = async (publicId) => {
   }
 };
 module.exports = {uploadImageOnCloudinary,deleteImageFromCloudinary};
-
-// pehle image public /images folder ke andar aayegi then cloudinary pr uplaod hogi and after that hamare server means images folder se delete ho jayegi and it will also display on the ui
